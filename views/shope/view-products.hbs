@@ -1,0 +1,50 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 mt-5 p-5">
+            <h1 class="mt-5 text-center"><b>Your Prosucts...</b></h1>
+            <table class="table mt-4 text-center" id="viewtable">
+                <thead>
+                    <tr>
+                        <th scope="col">No.</th>
+                        <th scope="col">Product Name</th>
+                        <th scope="col">Model Number</th>
+                        <th scope="col">Product Type</th>
+                        <th scope="col">Product Price</th>
+                        <th scope="col">Dicription</th>
+                        <th scope="col">Image 1</th>
+                        <th scope="col">Image 2</th>
+                        <th scope="col">Image 3</th>
+                        <th scope="col">Edit/Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each pro}}
+                    <tr>
+                        <td class="pt-4">{{@index}}</td>
+                        <td class="pt-4">{{this.pname}}</td>
+                        <td class="pt-4">{{this.mnumber}}</td>
+                        <td class="pt-4">{{this.type}}</td>
+                        <td class="pt-4">{{this.price}}</td>
+                        <td class="pt-4">{{this.discription}}</td>
+                        <td><img src="/product-image/{{this._id}}1.jpg" style="width: 100px; height: 80px;"
+                                alt="Product 1"></td>
+                        <td><img src="/product-image/{{this._id}}2.jpg" style="width: 100px; height: 80px;"
+                                alt="Product 1"></td>
+                        <td><img src="/product-image/{{this._id}}3.jpg" style="width: 100px; height: 80px;"
+                                alt="Product 1"></td>
+                        <td>
+                            <a href="/shope/edit?id={{this._id}}" class="btn btn-primary mt-4">Edit Product</a>
+                            <a href="/shope/remove?id={{this._id}}" class="btn btn-danger mt-4"
+                                onclick="return confirm('Are your sure to delete this product..?')">Remove Product</a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+  
+</script>

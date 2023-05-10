@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed; z-index: 2; width: 100%;">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/shope/addpro">Add Products <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/shope/viewpro">View Products <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            
+            <div class="dropdown  my-2 ">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{#if suser}}
+                    {{suser.sname}}
+                    {{else}}
+                    Account
+                    {{/if}}
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    {{#if suser}}
+                    <a class="dropdown-item" href="/shope/logout">Logout</a>
+                    <a class="dropdown-item" href="/shope/editaccount?id={{suser._id}}">Edit Account</a>
+                    <a class="dropdown-item" href="/shope/removeaccount" onclick="return confirm('Are You Sure To Delete Your {{suser.sname}} Account')">Delete Account</a>
+                    {{else}}
+                    <a class="dropdown-item" href="/shope/signup">Signup</a>
+                    <a class="dropdown-item" href="/shope/login">Login</a>
+                    {{/if}}
+
+                </div>
+            </div>
+        </form>
+    </div>
+</nav>

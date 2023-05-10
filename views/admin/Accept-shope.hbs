@@ -1,0 +1,84 @@
+<div class="conitainer-fluid">
+    <div class="row p-5">
+        <div class="col-md-12 mt-5">
+            <table class="table p-5">
+                <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Shope Name</th>
+                        <th scope="col">Shope Image</th>
+                        <th scope="col">Mail Address</th>
+                        <th scope="col">Password</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Pincode</th>
+                        <th scope="col">Location</th>
+                        <th scope="col" class="pl-5">Accept/Reject</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each shopes}}
+                    <tr>
+                        <td class="pt-5">{{@index}}</td>
+                        <td class="pt-5">{{this.sname}}</td>
+                        <td><img src="/Shope_image/{{this._id}}.jpg" style="width: 200px; height: 100px;"
+                                alt="Shope Image"></td>
+                        <td class="pt-5">{{this.email}}</td>
+                        <td class="pt-5">{{this.password}}</td>
+                        <td class="pt-5">{{this.address}}</td>
+                        <td class="pt-5">{{this.pincode}}</td>
+                        <td class="pt-5"><a href="{{this.location}}" class="btn btn-outline-warning"
+                                style="text-decoration: none; color: black;"><i
+                                    class="material-icons">place</i>Location</a></td>
+                        <td class="pt-4">
+                            <form accept="/admin/accept" method="post">
+
+                                <div class="form-group" style="display: none;">
+                                    <label for="exampleInputPassword1">Shope Name</label>
+                                    <input type="text" name="sname" class="form-control" id="exampleInputPassword1"
+                                        value="{{this.sname}}">
+                                </div>
+                                <div class="form-group" style="display: none;">
+                                    <label for="exampleInputEmail1">Shope mail address</label>
+                                    <input type="email" name="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" value="{{this.email}}">
+
+                                </div>
+                                <div class="form-group" style="display: none;">
+                                    <label for="exampleInputPassword1">Password</label>
+                                    <input type="password" name="password" class="form-control"
+                                        id="exampleInputPassword1" value="{{this.password}}">
+                                </div>
+                                <div class="form-group" style="display: none;">
+                                    <label for="exampleInputPassword1">Address</label>
+                                    <input type="text" name="address" class="form-control" id="exampleInputPassword1"
+                                        value="{{this.address}}">
+                                </div>
+                                <div class="form-group" style="display: none;">
+                                    <label for="exampleInputPassword1">Pincode</label>
+                                    <input type="number" name="pincode" class="form-control" id="exampleInputPassword1"
+                                        value="{{this.pincode}}">
+                                </div>
+                                <div class="form-group" style="display: none;">
+                                    <label for="exampleInputPassword1">Shope Location(Google Map Url)</label>
+                                    <input type="text" name="location" class="form-control" id="exampleInputPassword1"
+                                        value="{{this.location}}">
+                                </div>
+                                <div class="form-group" style="display: none;">
+                                    <label for="exampleInputPassword1">Shope Image Id</label>
+                                    <input type="text" name="id" class="form-control"
+                                        value="{{this._id}}">
+                                </div>
+
+                                <button type="submit" id="sbutton" class="btn btn-outline-success text-center"
+                                    style="width: 100px;">✔ Accept
+                                </button>
+                            </form>
+                            <a href="/admin/rejectshope?id={{this._id}}" class="btn btn-outline-danger mt-3">✖ Remove</a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
