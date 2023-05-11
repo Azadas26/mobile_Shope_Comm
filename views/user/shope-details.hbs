@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <div class="row">
+        {{#each shops}}
+
+        <div class="col-md-3 text-center mt-5 pt-5">
+
+
+            <div class="card m-auto mt-5 " style="width: 18rem;border-radius: 10px;background: transparent;">
+                <div class="cards p-5" style="border-radius: 10px;">
+                    <a href="/intoshop?id={{this._id}}" class="text-light" style="text-decoration: none;">
+                        <img class="card-img-top img-fluid" style="width: 200px; height: 100px;" src="/Shope_image/{{this.id}}.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">{{this.sname}}</h5>
+                            <p class="card-text text-dark">Address : {{this.address}}</p>
+                            <p class="card-text text-dark">Pincode : {{this.pincode}}</p>
+                            <p class="card-text text-dark">Place : {{this.subdistric}}</p>
+
+                        </div>
+                    </a>
+                    <a href="{{this.location}}" class="btn btn-warning"><i class="material-icons">place</i> Location</a>
+                </div>
+
+
+            </div>
+        </div>
+
+        {{/each}}
+    </div>
+</div>
+
+<style>
+    .cards:hover {
+        font-size: 20px;
+        background-color: rgba(217, 209, 209, 0.6);
+    }
+</style>

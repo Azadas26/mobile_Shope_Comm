@@ -1,0 +1,77 @@
+<div class="row">
+    <div class="col-md-12 mt-5 pt-5">
+        <div class="mt-5 p-5" id="container">
+            <h1 class="p-2 mt-5">Find Shopes</h1>
+            <button class="btn btn-success" id="btn">Click Me</button>
+
+            {{#if noshope}}
+                <h4 class="text-center text-danger mt-5">{{noshope}}</h4>
+            {{/if}}
+
+        </div>
+        <div class="mt-3" id="popup">
+            <div class="popup-content">
+                <form action="/findlocation" method="post" class="text-center">
+                    <h3 class="text-right" id="close">✖</h3>
+                    <h4 class="">Enter Your Location</h4>
+                    <div class="form-group mt-3">
+                        <label for="exampleInputPassword1">Location</label>
+                        <input type="text" name="location" class="form-control" id="exampleInputPassword1"
+                            placeholder="Eg: Kayamkulam">
+                    </div>
+
+                    <button type="submit" class="btn btn-outline-primary" style="width: 50%;">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('btn').addEventListener("click", () => {
+
+
+        document.querySelector('#popup').style.display = "flex"
+
+    })
+    document.getElementById('close').addEventListener("click", () => {
+        document.querySelector('#popup').style.display = "none"
+    })
+</script>
+
+
+<style>
+    #container {
+        position: absolute;
+        top: 50%;
+        left: 40%;
+
+        text-align: center;
+    }
+
+    #btn:hover {
+        background-color: white;
+        color: black;
+    }
+
+    #popup {
+        background: rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 2000%;
+        position: absolute;
+        top: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .popup-content {
+        width: 400px;
+        height: 300px;
+        background-color: white;
+        padding: 20px;
+        margin-top: -100px;
+        border-radius: 5px;
+        position: relative;
+    }
+</style>

@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <div class="row p-5">
+        <div class="col-md-12 mt-5 p-5">
+            <form accept="/login" method="post" enctype="multipart/form-data">
+                <h1 class="text-center"><b><i>Login
+
+                        </i></b></h1>
+                {{#if err}}
+                <h4 class="text-danger"><i>{{err}}...</i></h4>
+                {{/if}}
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Enter Your mail address</label>
+                    <input type="email" name="email" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" name="password" class="form-control" id="exampleInputPassword1"
+                        placeholder="Password">
+                </div>
+
+                <button type="submit" id="sbutton" class="btn btn-outline-primary mt-2"
+                    style="width: 100%;">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

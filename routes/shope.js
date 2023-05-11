@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var shopbase = require('../database/Shope_Base')
+var upperCase= require('upper-case')
 
 
 module.exports.verfyshopeLogin = (req, res, next) => {
@@ -29,6 +30,9 @@ router.get('/signup', (req, res) => {
 })
 
 router.post('/signup', (req, res) => {
+    
+    req.body.subdistric = upperCase.upperCase((req.body.subdistric))
+    console.log(req.body.subdistric);
     shopbase.Shope_Details_Into_Temp_Collection(req.body).then((Id) => {
         if (req.files.image) {
             var image = req.files.image

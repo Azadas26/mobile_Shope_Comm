@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <div class="row p-5">
+        <div class="col-md-12 mt-5 p-5">
+            <form accept="/signup" method="post" enctype="multipart/form-data" id="userform">
+                <h1 class="text-center"><b><i>Create Your Account
+
+                        </i></b></h1>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Enter Your Name</label>
+                    <input type="text" name="name" class="form-control" id="exampleInputPassword1" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Your mail address</label>
+                    <input type="email" name="email" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" name="password" class="form-control" id="exampleInputPassword1"
+                        placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Gender :</label> <br>
+                    <label for="exampleInputPassword1">Male</label>
+                    <input type="radio" name="gender" value="male" class="form-control">
+                    <label for="exampleInputPassword1">Female</label>
+                    <input type="radio" name="gender" value="female" class="form-control">
+                    <label for="exampleInputPassword1">Others</label>
+                    <input type="radio" name="gender" value="others" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Age</label>
+                    <input type="number" name="age" class="form-control" id="r">
+                </div>
+                <button type="submit" id="sbutton" class="btn btn-success mt-2" style="width: 100%;">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    #sbutton:hover {
+        color: rgb(207, 20, 20);
+        background-color: rgb(51, 51, 159);
+    }
+</style>

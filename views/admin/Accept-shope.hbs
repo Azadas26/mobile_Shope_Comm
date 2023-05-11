@@ -11,6 +11,7 @@
                         <th scope="col">Password</th>
                         <th scope="col">Address</th>
                         <th scope="col">Pincode</th>
+                        <th scope="col">Sub-Distric</th>
                         <th scope="col">Location</th>
                         <th scope="col" class="pl-5">Accept/Reject</th>
                     </tr>
@@ -26,6 +27,7 @@
                         <td class="pt-5">{{this.password}}</td>
                         <td class="pt-5">{{this.address}}</td>
                         <td class="pt-5">{{this.pincode}}</td>
+                        <td class="pt-5">{{this.subdistric}}</td>
                         <td class="pt-5"><a href="{{this.location}}" class="btn btn-outline-warning"
                                 style="text-decoration: none; color: black;"><i
                                     class="material-icons">place</i>Location</a></td>
@@ -59,6 +61,10 @@
                                         value="{{this.pincode}}">
                                 </div>
                                 <div class="form-group" style="display: none;">
+                                    <label for="exampleInputPassword1">Shope subdistric</label>
+                                    <input type="text" name="subdistric" class="form-control" id="exampleInputPassword1" value="{{this.subdistric}}">
+                                </div>
+                                <div class="form-group" style="display: none;">
                                     <label for="exampleInputPassword1">Shope Location(Google Map Url)</label>
                                     <input type="text" name="location" class="form-control" id="exampleInputPassword1"
                                         value="{{this.location}}">
@@ -82,3 +88,4 @@
         </div>
     </div>
 </div>
+
