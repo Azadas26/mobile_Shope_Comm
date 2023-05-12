@@ -113,4 +113,26 @@ router.get('/smartwatch', verfyUserLogin, (req, res) => {
     })
   })
 })
+router.get('/edituseracc', verfyUserLogin, (req, res) => {
+   userdb.Get_User_all_Details_For_EditORUpdate_Account(req.session.user._id).then((userinfo)=>
+   {
+     res.render('./user/edit-info', { userhd: true, user: req.session.user, us: userinfo })
+   })
+})
+router.post('/edituseracc', verfyUserLogin, (req, res) => {
+  console.log(req.body);
+     userdb.Edit_OR_Update_User_Information(req.session.user._id,req.body).then((data)=>
+     {
+        res.redirect('/')
+     })
+})
+
+router.get('/deleteuser',verfyUserLogin,(req,res)=>
+{
+    userdb.Delete_User_Account_By_itself(req.session.user._id).then(()=>
+    {
+       res.redirect('/')
+    })
+})
+
 module.exports = router;

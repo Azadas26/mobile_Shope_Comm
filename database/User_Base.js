@@ -66,5 +66,45 @@ module.exports =
                 resolve(data)
             })
         })
+    },
+    Edit_OR_Update_User_Information:(Id,info)=>
+    {
+        return new Promise(async(resolve,reject)=>
+        {
+            await db.get().collection(collection.User_base).updateOne({_id:objectId(Id)},
+            {
+                $set:
+                {
+                    name:info.name,
+                    emai:info.email,
+                    gender:info.gender,
+                    age:info.age
+                }
+            }).then((data)=>
+            {
+                console.log(data);
+                resolve(data)
+            })
+        })
+    },
+    Get_User_all_Details_For_EditORUpdate_Account:(Id)=>
+    {
+        return new Promise(async(resolve,reject)=>
+        {
+            await db.get().collection(collection.User_base).findOne({_id:objectId(Id)}).then((info)=>
+            {
+                resolve(info)
+            })
+        })
+    },
+    Delete_User_Account_By_itself:(Id)=>
+    {
+        return new Promise((resolve,reject)=>
+        {
+            db.get().collection(collection.User_base).removeOne({_id:objectId(Id)}).then((data)=>
+            {
+                resolve()
+            })
+        })
     }
 }
