@@ -1,19 +1,24 @@
 <div class="container-fluid">
     <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center text-light mt-5 pt-5" style="font-family: serif;"><b>Available Shops</b></h1>
+        </div>
+    </div>
+    <div class="row">
         {{#each shops}}
 
-        <div class="col-md-3 text-center mt-5 pt-5">
+        <div class="col-md-3 text-center mt-5 mb-5">
 
 
-            <div class="card m-auto mt-5 " style="width: 18rem;border-radius: 10px;background: transparent;">
+            <div class="card m-auto mt-5" style="width: 18rem;border-radius: 10px;background: transparent; border: solid;">
                 <div class="cards p-5" style="border-radius: 10px;">
                     <a href="/intoshop?id={{this._id}}" class="text-light" style="text-decoration: none;">
                         <img class="card-img-top img-fluid" style="width: 200px; height: 100px;" src="/Shope_image/{{this.id}}.jpg" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title text-dark">{{this.sname}}</h5>
-                            <p class="card-text text-dark">Address : {{this.address}}</p>
-                            <p class="card-text text-dark">Pincode : {{this.pincode}}</p>
-                            <p class="card-text text-dark">Place : {{this.subdistric}}</p>
+                            <h5 class="card-title">{{this.sname}}</h5>
+                            <p class="card-text">Address : {{this.address}}</p>
+                            <p class="card-text">Pincode : {{this.pincode}}</p>
+                            <p class="card-text">Place : {{this.subdistric}}</p>
 
                         </div>
                     </a>

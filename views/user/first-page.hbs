@@ -101,12 +101,12 @@
     <div class="col-md-12">
         <div class="m-auto text-center p-5 mt-5" id="containe"
             style="width: 30%; height: 250px;background-image: linear-gradient(to left, #021025, #263652, #4c5f84, #758cb9, #a0bbf2); border-radius: 20px; box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;">
-            <h1 class="" style="ont-family: serif;"><b>Find Shops</b></h1>
+            <h1 class="text-light" ><b style="ont-family: serif;">Find Shops</b></h1>
 
             {{#if noshope}}
             <h4 class="text-center text-danger mt-2">{{noshope}} &#128531;</h4>
             {{/if}}
-            <button class="btn btn-success mt-3" style="width: 50%;" id="btn"><b>Click Me</b></button>
+            <button class="btn btn-primary mt-3" style="width: 50%; border-radius: 12px;" id="btn"><b>Click Me</b></button>
 
 
         </div>
@@ -165,7 +165,7 @@
         <p style="display: inline;" class="text-light">&copy; Copy right</p>
         <p style="display: inline;" class="ml-3 text-light">&reg; Registered</p> <br>
         <div class="text-right pr-3">
-            <a class="text-light"
+            <a class="text-light" style="font-size: 8px;"
                 href="https://mail.google.com/mail/u/0/#advanced-search/to=azad45518%40gmail.com&query=in%3Asent&isrefinement=true&todisplay=Azad+A+S">Developed
                 by :Azad.A.S</a>
         </div>
@@ -189,11 +189,16 @@
     #container {
 
         text-align: center;
+        
     }
 
     #btn:hover {
         background-color: white;
         color: black;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        
+        height: 40px;
+       
     }
 
     #popup {

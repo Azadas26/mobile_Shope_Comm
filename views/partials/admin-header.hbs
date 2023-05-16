@@ -8,11 +8,15 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Admin_Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/admin/showshops">Shops<span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+            <li class="nav-item active">
+                <a class="nav-link" href="/admin/showusers">Users<span class="sr-only">(current)</span></a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/admin/showproducts">Products<span class="sr-only">(current)</span></a>
+            </li>
+            
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
@@ -30,8 +34,27 @@
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <div class="dropdown  my-2 ">
+                <button class="btn dropdown-toggle text-dark"
+                    style="background: transparent; border-color: rgb(92, 92, 150);" type="button" id="dropdown"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{#if user}}
+                    {{user.name}}
+                    {{else}}
+                    Account
+                    {{/if}}
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    {{#if user}}
+                    <a class="dropdown-item" href="/admin/logout">Logout</a>
+
+                    {{else}}
+
+                    <a class="dropdown-item" href="/admin">Login</a>
+                    {{/if}}
+
+                </div>
+            </div>
         </form>
     </div>
 </nav>

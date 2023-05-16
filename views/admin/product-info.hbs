@@ -1,0 +1,53 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 mt-5 p-5">
+            <table class="table mt-5 text-light" id="protable">
+                <h1 class="text-light text-center"><b><i>Available Products And Shops</i></b></h1>
+                <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Product Name</th>
+                        <th scope="col">Model Number</th>
+                        <th scope="col">Product Type</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Product Image 1</th>
+                        <th scope="col">Product Image 2</th>
+                        <th scope="col">Product Image 3</th>
+                        <th scope="col">Shop Name</th>
+                        <th scope="col">Email Address</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Pincode</th>
+                        <th scope="col">Sub Distric</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Shope Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each proo}}
+                    <tr>
+                        <td>{{@index}}</td>
+                        <td>{{this.pname}}</td>
+                        <td>{{this.mnumber}}</td>
+                        <td>{{this.type}}</td>
+                        <td>{{this.price}}</td>
+                        <td>{{this.discription}}</td>
+                        <td><img src="/product-image/{{this._id}}1.jpg" style="width: 100px; height: 100px;" alt="Product Image 1"></td>
+                        <td><img src="/product-image/{{this._id}}2.jpg" style="width: 100px; height: 100px;" alt="Product Image 2"></td>
+                        <td><img src="/product-image/{{this._id}}3.jpg" style="width: 100px; height: 100px;" alt="Product Image 3"></td>
+                        <td>{{this.shope.sname}}</td>
+                        <td>{{this.shope.email}}</td>
+                        <td>{{this.shope.address}}</td>
+                        <td>{{this.shope.pincode}}</td>
+                        <td>{{this.shope.subdistric}}</td>
+                        <td><a href="{{this.shope.location}}" class="btn btn-warning text-dark"
+                                style="text-decoration: none;">Location</a></td>
+                        <td><img src="/Shope_image/{{this.shope.id}}.jpg" alt="" style="width: 100px; height: auto;"></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

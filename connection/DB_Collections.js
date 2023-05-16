@@ -1,11 +1,10 @@
 
-module.exports=
+module.exports =
 {
-    Temp_For_shope_accept:"Temp_Base",
-    shope_base:"Shope_Base",
+    Temp_For_shope_accept: "Temp_Base",
+    shope_base: "Shope_Base",
     User_base: "User_Base",
-    Admin_base: "Admin_Base",
-    Shope_Products:"shope_products",
-    Cart_base: "Cart_Base",
-    Order_base: "Order_Base",
+    Admin_base: "admin_base",
+    Shope_Products: "shope_products",
+
 }
