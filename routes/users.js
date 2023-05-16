@@ -134,5 +134,17 @@ router.get('/deleteuser',verfyUserLogin,(req,res)=>
        res.redirect('/')
     })
 })
+router.get('/proinfos',(req,res)=>
+{
+  userdb.Find_Products_Details_By_porduct_Clicked(req.query.id).then((data)=>
+  {
+    console.log(data);
+    res.render('./user/inside-pro', { userhd: true, user: req.session.user,pros:data})
+  })
+})
+router.get('/about',(req,res)=>
+{
+  res.render('./user/about-page', { userhd: true, user: req.session.user })
+})
 
 module.exports = router;

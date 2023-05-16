@@ -106,5 +106,15 @@ module.exports =
                 resolve()
             })
         })
+    },
+    Find_Products_Details_By_porduct_Clicked:(Id)=>
+    {
+        return new Promise(async(resolve,reject)=>
+        {
+            await db.get().collection(collection.Shope_Products).findOne({_id:objectId(Id)}).then((data)=>
+            {
+                resolve(data)
+            })
+        }) 
     }
 }

@@ -1,9 +1,10 @@
-<div class="container-fluid">
+<div class="container-fluid" style="height: 968px;">
     <div class="row p-5">
-        <div class="col-md-12 mt-5 p-5">
+        <div class="col-md-12 mt-5 p-5 text-light">
+           <div class="mt-5">
             <form accept="/signup" method="post" enctype="multipart/form-data" id="userform">
                 <h1 class="text-center"><b><i>Create Your Account
-
+            
                         </i></b></h1>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Enter Your Name</label>
@@ -11,15 +12,14 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Your mail address</label>
-                    <input type="email" name="email" class="form-control" id="exampleInputEmail1"
-                        aria-describedby="emailHelp" placeholder="Enter email">
+                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Enter email">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
                         else.</small>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Password</label>
-                    <input type="password" name="password" class="form-control" id="exampleInputPassword1"
-                        placeholder="Password">
+                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Gender :</label> <br>
@@ -36,6 +36,7 @@
                 </div>
                 <button type="submit" id="sbutton" class="btn btn-success mt-2" style="width: 100%;">Submit</button>
             </form>
+           </div>
         </div>
     </div>
 </div>

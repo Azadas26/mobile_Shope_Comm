@@ -18,29 +18,28 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-3">
-
-            <div class="mt-4" style="background-color: #343a40; text-align: center;">
-                <a href="/intoshop?id={{shop._id}}" class="btn btn-dark " style="width: 100%; color: #ffc107;"
-                    id="mob">MOBILES</a>
-            </div>
+    <div class="col-md-3">
+    
+        <div class="mt-4" style="background-color: #535e78; text-align: center;">
+            <a href="/intoshop?id={{shop._id}}" class="btn  " style="width: 100%; color: #f8f8f6;" id="mobbtn">MOBILES</a>
         </div>
-        <div class="col-md-3">
-            <div class="mt-4" style="background-color: #ffc107;text-align: center;">
-                <a href="/laoptoppro?id={{shop._id}}" class="btn btn-warning" style="width: 100%;">LAPTOPS</a>
-            </div>
+    </div>
+    <div class="col-md-3">
+        <div class="mt-4" style="background-color: #535e78;text-align: center;">
+            <a href="/laoptoppro?id={{shop._id}}" class="btn text-light" style="width: 100%;" id="mobbtn">LAPTOPS</a>
         </div>
-        <div class="col-md-3">
-            <div class="mt-4" style="background-color: #343a40; text-align: center;">
-                <a href="/smartwatch?id={{shop._id}}" class="btn btn-dark" style="width: 100%; color: #ffc107;">Smart
-                    Watch</a>
-            </div>
+    </div>
+    <div class="col-md-3">
+        <div class="mt-4" style="background-color: #22447d; text-align: center;">
+            <a href="/smartwatch?id={{shop._id}}" class="btn" style="width: 100%; color: #fafaf8;" id="mobbtn">Smart
+                Watch</a>
         </div>
-        <div class="col-md-3">
-            <div class="mt-4" style="background-color: #343a40; text-align: center;">
-                <a href="/otherpro?id={{shop._id}}" class="btn btn-dark" style="width: 100%; color: #ffc107;">OTHERS</a>
-            </div>
+    </div>
+    <div class="col-md-3">
+        <div class="mt-4" style="background-color: #22447d; text-align: center;">
+            <a href="/otherpro?id={{shop._id}}" class="btn" style="width: 100%; color: #f8f7f5;" id="mobbtn">OTHERS</a>
         </div>
+    </div>
 
     </div>
     <div class="row">
@@ -61,17 +60,17 @@
                 <tbody>
                     {{#each swh}}
                     <tr>
-                        <td class="pt-5">{{@index}}</td>
-                        <td class="pt-5">{{this.pname}}</td>
-                        <td class="pt-5">{{this.mnumber}}</td>
-                        <td class="pt-5">{{this.price}}</td>
-                        <td class="pt-5">{{this.discription}}</td>
-                        <td><img src="/product-image/{{this._id}}1.jpg" style="width: 100px; height: 100px;"
-                                alt="Product Image1"> </td>
-                        <td> <img src="/product-image/{{this._id}}2.jpg" style="width: 100px; height: 100px;"
-                                alt="Product Image2"> </td>
-                        <td> <img src="/product-image/{{this._id}}3.jpg" style="width: 100px; height: 100px;"
-                                alt="Product Image">
+                        <td class="pt-5"><a href="/proinfos?id={{this._id}}">{{@index}}</a></td>
+                        <td class="pt-5"><a href="/proinfos?id={{this._id}}">{{this.pname}}</a></td>
+                        <td class="pt-5"><a href="/proinfos?id={{this._id}}">{{this.mnumber}}</a></td>
+                        <td class="pt-5"><a href="/proinfos?id={{this._id}}">{{this.price}}</a></td>
+                        <td class="pt-5"><a href="/proinfos?id={{this._id}}">{{this.discription}}</a></td>
+                        <td><a href="/proinfos?id={{this._id}}"><img src="/product-image/{{this._id}}1.jpg" style="width: 100px; height: 100px;"
+                                    alt="Product Image"></a> </td>
+                        <td> <a href="/proinfos?id={{this._id}}"><img src="/product-image/{{this._id}}2.jpg"
+                                    style="width: 100px; height: 100px;" alt="Product Image"></a> </td>
+                        <td><a href="/proinfos?id={{this._id}}"><img src="/product-image/{{this._id}}3.jpg" style="width: 100px; height: 100px;"
+                                    alt="Product Image"></a>
                         </td>
                     </tr>
                     {{/each}}
@@ -95,6 +94,10 @@
     #p3:hover {
         font-size: 20px;
         color: black;
+    }
+    #mobbtn:hover
+    {
+        background-color: red;
     }
 </style>
 

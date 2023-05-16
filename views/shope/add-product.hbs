@@ -1,9 +1,9 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 text-light">
 
             <form action="/shope/addpro" method="post" enctype="multipart/form-data" class="mt-5 p-5" id="proform">
-                <h1 class="text-center"><b>Add Your Product</b></h1>
+                <h1 class="text-center" style="font-family: serif;"><b>Add Your Product</b></h1>
                 <div class="form-group mt-4">
                     <label for="exampleInputEmail1">Product Name</label>
                     <input type="text" name="pname" class="form-control" id="exampleInputEmail1"
@@ -29,13 +29,13 @@
                     <input type="number" name="price" class="form-control" id="exampleInputPassword1"
                         placeholder="150000/-">
                 </div>
-                <div class="form-group">
+                <div class="form-group pt-3">
                     <label for="exampleInputPassword1">Discription</label>
                     <input style="height: 100px;" name="discription" type="text" class="form-control"
                         id="exampleInputPassword1"
                         placeholder="Eg :Samsung Galaxy S23 Ultra 5G`a 6.8 inches Dynamic AMOLED display features a pixel density of 501ppi along with a resolution of 1440 x 3008 pixels and an aspect ratio of 20:9. This bezel-less display also flaunts a refresh rate of 120Hz layered with a Corning Gorilla Glass.">
                 </div>
-                <div class="form-group">
+                <div class="form-group pt-3">
                     <label for="exampleInputPassword1">Product Image 1</label>
                     <input type="file" name="image1" class="form-control" id="exampleInputPassword1"
                         placeholder="image1">
@@ -51,7 +51,7 @@
                         placeholder="image3">
                 </div>
 
-                <button type="submit" class="btn btn-primary mt-2" style="width: 100%;">Submit</button>
+                <button type="submit" class="btn btn-primary mt-3" style="width: 100%;">Submit</button>
             </form>
         </div>
 
